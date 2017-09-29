@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jh.owspace.MainActivity">
+    android:orientation="vertical"
+    tools:context=".view.activity.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.example.jh.owspace.view.widget.VerticalViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shadow">
+
+        <ImageView
+            android:id="@+id/left_slide"
+            android:layout_width="?actionBarSize"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/column" />
+
+        <ImageView
+            android:id="@+id/right_slide"
+            android:layout_width="?actionBarSize"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/person" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="单  读"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+</FrameLayout>

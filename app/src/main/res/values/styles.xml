@@ -15,4 +15,11 @@
         <item name="android:windowFullscreen">false</item>
         <item name="android:windowBackground">@drawable/welcome_default2</item>
     </style>
+    <!--左右菜单的style-->
+    <style name="MenuColunmStyle">
+        <item name="android:textSize">40.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 </resources>
